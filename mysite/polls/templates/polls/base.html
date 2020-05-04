@@ -2,17 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    <title>Title</title>
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
 </head>
 <body>
+{% include './header.html'%}
 
-<hr>
-<p>Header</p>
-<hr>
-{% block main_content %}
-{% endblock %}
+<div class="jumbotron">
+  <div class="container">
+      <h3>
+        {% block main_content %}
+        {% endblock %}
+      </h3>
+  </div>
+</div>
 
 {% include './footer.html'%}
 
